@@ -13,8 +13,11 @@ class TestClass:
         entrada = '13/03/2000' # Given-Contexto
         esperado = 22
 
+        # Sem fixture
         # funcionario_teste = Funcionario('Teste', entrada, 1111)
         # resultado = funcionario_teste.idade() # When-Ação
+
+        # Com fixture
         resultado = funcionario.idade() # When-Ação
 
         assert esperado == resultado # Then-Desfecho
@@ -24,8 +27,28 @@ class TestClass:
         entrada = ' Lucas Carvalho ' # Given-Contexto
         esperado = 'Carvalho'
 
+        # Sem fixture
         # lucas = Funcionario(entrada, '11/11/2000', 1111)
         # resultado = lucas.sobrenome() # When-Ação
+
+        # Com fixture
         resultado = funcionario.sobrenome() # When-Ação
+
+        assert esperado == resultado # Then-Desfecho
+
+    def test_quando_decrescimo_salario_recebe_100000_deve_retornar_90000(self, funcionario):
+        # Given-When-Then
+        entrada_salario = 100000 # Given-Contexto
+        entrada_nome = 'Paulo Bragança'
+        esperado = 90000
+
+        # Sem fixture
+        funcionario_teste = Funcionario(entrada_nome, '13/03/2000', entrada_salario)
+        funcionario_teste.decrescimo_salario() # When-Ação
+        resultado = funcionario_teste.salario
+
+        # Com fixture
+        # funcionario.decrescimo_salario() # When-Ação
+        # resultado = funcionario.salario
 
         assert esperado == resultado # Then-Desfecho

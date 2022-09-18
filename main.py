@@ -1,8 +1,4 @@
-from bytebank import Funcionario
-
-# lucas = Funcionario("Lucas Carvalho", '13/03/2000', 1000)
-
-# print(lucas.idade())
+from codigo.bytebank import Funcionario
 
 def teste_idade():
     funcionario = Funcionario('Teste', '13/03/2000', 1111)

@@ -1,5 +1,6 @@
 from codigo.bytebank import Funcionario
 import pytest
+from pytest import mark
 
 
 class TestClass:
@@ -53,6 +54,7 @@ class TestClass:
 
         assert esperado == resultado # Then-Desfecho
 
+    @mark.calcular_bonus
     def test_quando_calcular_bonus_recebe_1000_deve_retornar_100(self, funcionario):
         # Given-When-Then
         entrada = 1000 # Given-Contexto
@@ -67,6 +69,7 @@ class TestClass:
 
         assert esperado == resultado # Then-Desfecho
 
+    @mark.calcular_bonus
     def test_quando_calcular_bonus_recebe_100000000_deve_retornar_exception(self, funcionario):
         # O pytest considera implicitamente o erro como o esperado
         with pytest.raises(Exception):

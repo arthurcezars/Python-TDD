@@ -52,3 +52,32 @@ class TestClass:
         # resultado = funcionario.salario
 
         assert esperado == resultado # Then-Desfecho
+
+    def test_quando_calcular_bonus_recebe_1000_deve_retornar_100(self, funcionario):
+        # Given-When-Then
+        entrada = 1000 # Given-Contexto
+        esperado = 100
+
+        # Sem fixture
+        funcionario_teste = Funcionario('Ana', '13/03/1997', entrada)
+        resultado = funcionario_teste.calcular_bonus() # When-Ação
+
+        # Com fixture
+        # resultado = funcionario.calcular_bonus() # When-Ação
+
+        assert esperado == resultado # Then-Desfecho
+
+    def test_quando_calcular_bonus_recebe_100000000_deve_retornar_exception(self, funcionario):
+        # O pytest considera implicitamente o erro como o esperado
+        with pytest.raises(Exception):
+            # Given-When-Then
+            entrada = 100000000 # Given-Contexto
+
+            # Sem fixture
+            funcionario_teste = Funcionario('Ana', '13/03/1997', entrada)
+            resultado = funcionario_teste.calcular_bonus() # When-Ação
+
+            # Com fixture
+            # resultado = funcionario.calcular_bonus() # When-Ação
+
+            assert resultado # Then-Desfecho

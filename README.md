@@ -21,5 +21,5 @@ funcionamento do framework para um comportamento indesejado.
    
 ## Arquivo .coveragerc   
    
-O arquivo .coveragerc altera a configuração do pytest-cov, nele nós podemos por exemplo indicar quais metódos não   
+O arquivo .coveragerc altera a configuração do pytest-cov, nele nós podemos por exemplo indicar quais metódos não 
 precisamos cobrir nos nossos testes e assim quando gerar o relatorio ele não vai indicar o método como não coberto.   

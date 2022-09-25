@@ -17,4 +17,9 @@ Obs.: É possivel usar mais de uma flag.
   
 O arquivo pytest.ini altera a configuração padrão do pytest, com isso podemos adicionar nossa propria configuração  
 como por exemplo os nossos markers pesonalizados. Cuidado para não alterar configurações que possam mudar o  
-funcionamento do framework para um comportamento indesejado.
+funcionamento do framework para um comportamento indesejado.   
+   
+## Arquivo .coveragerc   
+   
+O arquivo .coveragerc altera a configuração do pytest-cov, nele nós podemos por exemplo indicar quais metódos não   
+precisamos cobrir nos nossos testes e assim quando gerar o relatorio ele não vai indicar o método como não coberto.   
